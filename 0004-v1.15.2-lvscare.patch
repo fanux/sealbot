@@ -1,0 +1,25 @@
+From d43d29fd332e6ce77f20b60b264c4a6ee876dbcb Mon Sep 17 00:00:00 2001
+From: fanux <fhtjob@hotmail.com>
+Date: Tue, 6 Aug 2019 19:22:35 +0800
+Subject: [PATCH 4/4] v1.15.2-lvscare
+
+---
+ .drone.yml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/.drone.yml b/.drone.yml
+index 03dcd66459..b7c20a35d8 100644
+--- a/.drone.yml
++++ b/.drone.yml
+@@ -11,7 +11,7 @@ steps:
+     GO111MODULE: on
+   commands:
+       - git clone https://github.com/fanux/LVScare /usr/local/go/src/github.com/fanux/LVScare
+-      - KUBE_GIT_TREE_STATE="clean" KUBE_GIT_VERSION=v1.15.1 KUBE_BUILD_PLATFORMS=linux/amd64 make all WHAT=cmd/kubeadm GOFLAGS=-v
++      - KUBE_GIT_TREE_STATE="clean" KUBE_GIT_VERSION=v1.15.2 KUBE_BUILD_PLATFORMS=linux/amd64 make all WHAT=cmd/kubeadm GOFLAGS=-v
+       - ls  _output/bin/
+ 
+ - name: publish
+-- 
+2.20.1 (Apple Git-117)
+
